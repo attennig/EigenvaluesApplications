@@ -10,11 +10,9 @@ for n = DIMS
     for k = [1:n_tests]
         M = rand(n,n);
         [V, D] = eig(M);
-        
         eigvals = nonzeros(abs(D));
         dominant_eigval = max(eigvals);
         i = find(dominant_eigval == nonzeros(abs(D)));
-      
         eigvals(i) = 0;
         dominant_eigvec = V(:,i);
         second_eigval = max(eigvals);

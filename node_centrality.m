@@ -1,4 +1,4 @@
-)n = 10;
+n = 10;
 
 ADJ = randi([0,1], n, n);
 ADJ = ADJ - tril(ADJ,-1) + triu(ADJ,1)';
